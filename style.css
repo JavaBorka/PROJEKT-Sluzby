@@ -1,0 +1,232 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300; /* light */
+    color: #8B8B8B;
+    background-color: #FAFAFA;
+}
+
+.kontejner {
+    padding: 60px 20px;
+}
+
+.obrazek {
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 500; /* medium */
+    color: #000000;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 60px;
+    height: 2px;
+    background-color: #407BFF;
+    margin: 10px auto 30px auto;
+}
+
+.kontejner p {
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.tlacitka a {
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-weight: 400; /* regular */
+    font-size: 14px;
+}
+
+.btn-modry {
+    background-color: #407BFF;
+    margin: 0 auto 10px auto;
+    width: 200px;
+}
+
+.btn-sedy {
+    background-color: #8B8B8B;
+    margin: 0 auto 0 auto;
+    width: 250px;
+}
+
+.tlacitko a {
+	display: block;
+	margin-bottom: 5px;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+}
+
+h2 {
+    font-weight: 500; /* medium */
+    color: #000000;
+    text-align: center;
+    margin: 70px auto 15px auto;
+}
+
+.ramecek {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.13);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.ramecek img {
+    flex: 0 0 20%;
+    width: 45px;
+    height: 40px;
+}
+
+.ramecek p {
+    flex: 1 1 80%;
+    margin: 0 0 0 10px;
+    font-weight: 300;
+    font-size: 13px;
+    text-align: left;
+}
+
+@media screen and (min-width: 640px) {
+    .tlacitka {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-modry {
+        margin: 0 20px 0 0;
+    }
+
+    .btn-sedy {
+        margin: 0;
+    }
+    
+    .ramecky {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ramecek {
+        flex: 0 0 calc((100% - 40px)/3);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ramecek p {
+        text-align: center;
+        padding: 20px 15px;
+        margin: 0;
+    }
+
+    .kontejner p {
+        margin: 0 0 40px 0;
+    }
+
+    .ramecek p {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .kontejner {
+        width: 1080px;
+        margin: auto;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .underline {
+        margin-left: 0;
+    }
+
+    .leva-cast p {
+        text-align: left;
+    }
+
+    .sekce1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sekce1 img {
+        order: 2;
+        flex: 0 0 calc((100% - 60px)/2);
+    }
+
+    .leva-cast {
+        order: 1;
+        flex: 0 0 calc((100% - 60px)/2);
+    }
+
+    .tlacitka {
+        flex-grow: 0;
+        justify-content: flex-start;
+    }
+
+    .sekce2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        margin-top: 80px;
+    }
+
+    .popisek {
+        order: 2;
+    }
+
+    .ramecky {
+        order: 1;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    .popisek p {
+        text-align: left;
+    }
+
+    .ramecek p {
+        margin: 0
+    }
+
+    .sekce3 {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        margin-top: 80px;
+    }
+
+    .sekce3 .ramecky {
+        order: 2;
+    }
+
+    .sekce3 .popisek {
+        order: 1;
+    }
+}
